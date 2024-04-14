@@ -43,11 +43,11 @@ def perform_search(query: str, course_collection: chromadb.Collection = None, nu
 if __name__ == "__main__":
     # Defining the demo profile details
     demo_profile_details = {
-        "Field_Of_Study": "Photonics and Optical Sciences",
+        "Field_Of_Study": "Computer Science",
         "Primary_Hobby": "Glassblowing",
         "Secondary_Hobby": "Model Building",
         "Gender": "Female",
-        "Desired_Career_Field": "Cybersecurity Analyst",
+        "Desired_Career_Field": "Machine Learning Engineer",
         "Country_Of_Origin": "Norway",
     }
 

@@ -30,7 +30,7 @@ My background and interests are as follows:
 {formatted_background_and_interests}
 
 These are the courses that came up when I searched for the phrase: "security".
-Out of these, give me the top 10 most relevant courses that align with my background and interests.
+Out of these, give me strictly the top 5 most relevant courses only that align with my background and interests.
 
 Courses:
 {formatted_course_list}
