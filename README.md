@@ -13,6 +13,8 @@ Recommendation Engine, Giving Class Recommendations to Duke Students
 │       ├── courses.csv
 │       ├── student_personas_v1.csv
 │       └── student_personas_v2.csv
+│   └── processed
+│       └──labeled_data_student_to_courseRecomm.csv
 ├── requirements.txt
 ├── scripts
 │   ├── ingest_course_data.py
