@@ -18,6 +18,7 @@ Include prerequisites for the course if available.
 Group courses by program. For each program, list the courses in the order of their catalog number.
 Let the title of the group be the program name.
 Every list point under it should be of the form: "Course Name (Course Code) - Course Title\nCourse Description\n (Prerequisites if any)".
+Separate the course details with 2 newline characters.
 
 Do not remove any details from course details while generating the output.
 Render the results in a list and not a table.
@@ -25,7 +26,7 @@ Fix any typos or grammatical errors in the course details as you parse them.
 Keep the course name and code in italic and the program/department name in bold.
 Strictly generate exactly 5 courses across all programs in total in the output.
 
-In the end, add another section to the output called recommended order indicating in which course they should take in which semester (spring/summer/fall).
+In the end, add another section to the output called recommended order in bold indicating in which course they should take in which semester (spring/summer/fall).
 It is currently Spring semester. Show one course per line the "recommended order" section.
 
 My background and interests are as follows:
