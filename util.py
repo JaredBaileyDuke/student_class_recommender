@@ -21,9 +21,6 @@ __llm_model__ = genai.GenerativeModel(
     safety_settings=safety_settings,
 )
 
-# Download the stopwords from nltk
-nltk.download('stopwords')
-
 # Configure the generative model with the API key
 genai.configure(api_key=GEMINI_API_KEY)
 

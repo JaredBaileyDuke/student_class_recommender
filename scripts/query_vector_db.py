@@ -19,7 +19,7 @@ def get_chroma_db_collection():
     return course_collection
 
 
-def perform_search(query: str, course_collection: chromadb.Collection = None, num_results: int = 15):
+def perform_search(query: str, course_collection: chromadb.Collection = None, num_results: int = 10):
     """
     Function to perform a search in the ChromaDB collection.
 
