@@ -1,3 +1,7 @@
+![Alt text](front_end_screenshot_1.png?raw=true "Student Class Recommendation Front End")
+![Alt text](front_end_screenshot_2.png?raw=true "Model Results")
+
+
 # AIPI-540 Module 3
 This is the repository for the third class module of the AIPI-540 course of the MEng in Artificial Intelligence at Duke University. The module is focused on applying recommendation systems to solve a problem.
 
@@ -41,14 +45,38 @@ We expect that future improvements to the models could be made using collected s
 
 ## Models
 We implemented 4 models:
-- BERT, not finetuned (naive)
+- BERT, pretrained (naive)
 - TF-IDF (Non-deep learning)
 - NCF (deep learning)
 - RAG with Gemini (deep learning)
 
 Despite being a simple method, we found powerful performance with the TF-IDF model. If you are resource constrained, this could be a good method for you to use.
 
-## Running the Code
+## Pipelines
+- BERT
+  - Course embeddings made with BERT pretrained model
+  - Student embeddings made with BERT pretrained model
+  - Cosine similarity
+  - Top 5 courses predicted per student
+- TF-IDF
+  - Extract course decrisptions
+  - Stop words removal and lemitization
+  - TF-IDF matix
+  - Cosine similarity of student features with course descriptions
+  - Top 5 courses predicted per student
+- NCF
+  - Embed student and course features into a matrix
+  - Train a neural network of 2 fully connected layers on matrix
+  - Top 5 courses predicted per student
+- RAG with Gemini
+  - Remove stop words and lemmitize
+  - Word embeddings performed in chromadb
+  - Gemini pro used with prompt engineering to show top 5 courses, as well as suggested terms to take the courses
+  - API exposure for inference
+  - React app to showcase results to students
+
+## Implementation
+
 
 ## Authors
 * [Mrinoy Banerjee](https://www.linkedin.com/in/mrinoy)
