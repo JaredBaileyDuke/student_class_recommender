@@ -25,24 +25,68 @@ course recommendation system that is
 ## Directory Structure
 ```
 .
+├── DukeClassRecomm.pdf
 ├── README.md
-├── chroma.log
 ├── constants.py
 ├── data
+│   ├── processed
+│   │   ├── courses_list.json
+│   │   ├── labeled_data_student_to_courseRecomm.csv
+│   │   └── user_features.json
 │   └── raw
+│       ├── Student_Personas_v2.csv
 │       ├── courses.csv
-│       ├── student_personas_v1.csv
-│       └── student_personas_v2.csv
-│   └── processed
-│       └──labeled_data_student_to_courseRecomm.csv
+│       └── student_personas_v1.csv
+├── images
+│   ├── front_end_screenshot_1.png
+│   └── front_end_screenshot_2.png
+├── models
+│   └── ncf_model_full.pth
+├── notebooks
+│   ├── dl-approach-ncf.ipynb
+│   ├── naive-bert.ipynb
+│   └── non_dl_approach.ipynb
 ├── requirements.txt
 ├── scripts
+│   ├── inference_DL.py
 │   ├── ingest_course_data.py
-│   └── query_vector_db.py
+│   ├── main_DL.py
+│   ├── preprocessing_DL.py
+│   ├── query_vector_db.py
+│   ├── test_evaluate_DL.py
+│   └── train_model_DL.py
 ├── server.py
-└── util.py
+├── util.py
+└── web-ui
+    ├── README.md
+    ├── package-lock.json
+    ├── package.json
+    ├── postcss.config.js
+    ├── public
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── src
+    │   ├── App.js
+    │   ├── assets
+    │   │   └── countries.json
+    │   ├── constants.js
+    │   ├── index.css
+    │   ├── index.js
+    │   ├── ui
+    │   │   ├── buttons.jsx
+    │   │   ├── input.jsx
+    │   │   ├── label.jsx
+    │   │   └── multi-step-loader.jsx
+    │   └── util
+    │       └── cn.js
+    └── tailwind.config.js
 
-4 directories, 11 files
+14 directories, 46 files
+
 ```
 ### Important Directories
 - `models`: Store for the trained model
