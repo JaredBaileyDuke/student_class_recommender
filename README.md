@@ -1,5 +1,5 @@
-![Alt text](front_end_screenshot_1.png?raw=true "Student Class Recommendation Front End")
-![Alt text](front_end_screenshot_2.png?raw=true "Model Results")
+![Image](https://github.com/JaredBaileyDuke/student_class_recommender/blob/main/images/front_end_screenshot_1.png)
+![Image](https://github.com/JaredBaileyDuke/student_class_recommender/blob/main/images/front_end_screenshot_2.png)
 
 
 # AIPI-540 Module 3
