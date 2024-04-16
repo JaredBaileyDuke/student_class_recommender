@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.optim import Adam
 
+
 class NCFModel(nn.Module):
     """
     Neural Collaborative Filtering (NCF) model for recommendation systems.
@@ -42,8 +43,10 @@ class NCFModel(nn.Module):
         """
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
-        x = torch.sigmoid(self.output(x))  # Using sigmoid since this is a binary classification
+        # Using sigmoid since this is a binary classification
+        x = torch.sigmoid(self.output(x))
         return x
+
 
 def training_model_workflow(X_train, Y_train, train_loader):
     """
@@ -94,6 +97,6 @@ def training_model_workflow(X_train, Y_train, train_loader):
         print(f"Epoch {epoch+1}, Loss: {train_loss}")
 
     # Save model
-    torch.save(model, 'D:/Duke/Sem2/DLA/CourseRecomm/CourseRecom_git/student_class_recommender/models/ncf_model_full.pth')
+    torch.save(model, 'models/ncf_model_full.pth')
     print("Saved the model!")
     return model

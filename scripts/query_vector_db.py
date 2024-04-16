@@ -2,7 +2,8 @@ import chromadb
 
 from constants import CHROMA_HOST, CHROMA_PORT, CHROMA_COLLECTION_NAME, COURSE_RECOMMENDATION_PROMPT
 from util import clean_text, get_formatted_key_value_pairs, get_response_from_llm, get_unique_values_from_dict
-from main_DL import predictions
+from scripts.main_DL import predictions
+
 
 def get_chroma_db_collection():
     """
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     }
     print("Deep Learning Results: ")
     predictions(demo_profile_details)
+    print("\n\n")
 
     print("RAG Based Results: ")
     # Formatting the demo profile details

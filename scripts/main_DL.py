@@ -1,8 +1,9 @@
 import argparse
-from preprocessing_DL import preprocess_workflow
-from train_model_DL import training_model_workflow
-from test_evaluate_DL import evaluate
-from inference_DL import predict
+
+from scripts.preprocessing_DL import preprocess_workflow
+from scripts.train_model_DL import training_model_workflow
+from scripts.test_evaluate_DL import evaluate
+from scripts.inference_DL import predict
 
 def train_test_model(filepath):
     X_train, X_test, Y_train, Y_test, train_loader, test_loader = preprocess_workflow(filepath=filepath)
@@ -14,14 +15,14 @@ def predictions(new_student):
     keys_to_extract = 'Field_Of_Study', 'Primary_Hobby', 'Secondary_Hobby', 'Desired_Career_Field'
     new_student = {key: new_student.get(key, None) for key in keys_to_extract}
     print(new_student)
-    model_path = 'D:/Duke/Sem2/DLA/CourseRecomm/CourseRecom_git/student_class_recommender/models/ncf_model_full.pth'
+    model_path = 'models/ncf_model_full.pth'
     top_courses = predict(new_student, model_path)
     print("Recommended Courses:", top_courses)
 
 def main():
     parser = argparse.ArgumentParser(description="Train and test the recommendation model or make predictions.")
     parser.add_argument("--mode", choices=["training", "inference"], required=True, help="Mode of operation: 'training' or 'inference'")
-    parser.add_argument("--data", default="D:/Duke/Sem2/DLA/CourseRecomm/CourseRecom_git/student_class_recommender/data/processed/labeled_data_student_to_courseRecomm.csv", help="Path to the training data file")
+    parser.add_argument("--data", default="data/processed/labeled_data_student_to_courseRecomm.csv", help="Path to the training data file")
     parser.add_argument("--Field_Of_Study", type=str, help="New student's field of study")
     parser.add_argument("--Primary_Hobby", type=str, help="New student's primary hobby")
     parser.add_argument("--Secondary_Hobby", type=str, help="New student's secondary hobby")

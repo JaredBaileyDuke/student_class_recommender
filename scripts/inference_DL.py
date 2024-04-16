@@ -16,11 +16,11 @@ def predict(new_student, model_path):
     """
     print(new_student)
     # Load user features from JSON file as a list
-    with open('D:/Duke/Sem2/DLA/CourseRecomm/CourseRecom_git/student_class_recommender/data/processed/user_features.json', 'r') as f:
+    with open('data/processed/user_features.json', 'r') as f:
         user_features_cols = json.load(f)
 
     # Load courses list from JSON file as a list
-    with open('D:/Duke/Sem2/DLA/CourseRecomm/CourseRecom_git/student_class_recommender/data/processed/courses_list.json', 'r') as f:
+    with open('data/processed/courses_list.json', 'r') as f:
         courses_list = json.load(f)
 
     # Create a DataFrame for the new student with all columns initialized to zero
